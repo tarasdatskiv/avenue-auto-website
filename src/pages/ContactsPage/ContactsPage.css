@@ -1,0 +1,399 @@
+.ContactsPage {
+    color: var(--main-text-color);
+    line-height: 1.75;
+}
+
+.ContactsPage *,
+.ContactsPage *::before,
+.ContactsPage *::after {
+    box-sizing: border-box;
+}
+
+.ContactsContainer {
+    width: calc(100% - 64px);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.ContactsSection {
+    padding: 96px 0;
+}
+
+.ContactsPage a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ContactsPage a:focus-visible,
+.ContactsPage button:focus-visible,
+.ContactsPage input:focus-visible,
+.ContactsPage select:focus-visible,
+.ContactsPage textarea:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+.ContactsPage .ContactsLabel {
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ContactsLabelLine {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ContactsLabelLine::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.ContactsHero {
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.ContactsHeroContent {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    align-items: end;
+    gap: 64px;
+}
+
+.ContactsHero h1 {
+    font-size: clamp(40px, 4vw, 72px);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.2;
+}
+
+.ContactsHero em {
+    color: var(--signed-text-color);
+    font-family: var(--accent-font);
+    font-weight: 400;
+}
+
+.ContactsHeroContent > p {
+    color: var(--signed-text-color);
+}
+
+.ContactsCards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.ContactCard {
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+    overflow-wrap: anywhere;
+}
+
+.ContactIcon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background-color: color-mix(in srgb, var(--accent-color) 14%, var(--white));
+    color: var(--accent-color);
+}
+
+.ContactIcon img,
+.ContactIcon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.ContactCard h2 {
+    color: var(--signed-text-color);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ContactCard > p,
+.ContactCard > a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ContactCard > span:last-child {
+    display: block;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+}
+
+.ContactsLayout {
+    display: grid;
+    grid-template-columns: 1.22fr 1fr;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.ContactsForm {
+    min-width: 0;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+}
+
+.ContactsForm h2,
+.ContactsFaqHeading h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+}
+
+.ContactsForm .ContactsLabel,
+.ContactsQuick .ContactsLabel {
+    margin-bottom: 8px;
+}
+
+.ContactsFormFields {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.ContactsFormRow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ContactsForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--secondary-text-color);
+    font-size: 12px;
+}
+
+.ContactsForm input,
+.ContactsForm select,
+.ContactsForm textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    font-size: 16px;
+}
+
+.ContactsForm input,
+.ContactsForm select {
+    min-height: 48px;
+}
+
+.ContactsForm textarea {
+    min-height: 108px;
+    resize: vertical;
+}
+
+.ContactsForm input::placeholder,
+.ContactsForm textarea::placeholder {
+    color: var(--signed-text-color);
+}
+
+.ContactsPage .ContactsButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ContactsPage .ContactsButton:hover {
+    background-color: var(--secondary-accent-color);
+}
+
+.ContactsButton img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.ContactsFormNote {
+    margin-top: 16px;
+    color: var(--signed-text-color);
+    font-size: 11px;
+    text-align: center;
+}
+
+.ContactsSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.ContactsMap {
+    display: block;
+    width: 100%;
+    height: 306px;
+    flex-grow: 1;
+    border: 0;
+    border-radius: 16px;
+}
+
+.ContactsQuick {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.ContactsQuick h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ContactsQuick > p:not(.ContactsLabel) {
+    margin: 12px 0 20px;
+    color: var(--signed-text-color);
+    font-size: 14px;
+}
+
+.ContactsQuickEmail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--secondary-text-color);
+    color: var(--signed-text-color);
+    font-size: 12px;
+}
+
+.ContactsFaq {
+    background-color: var(--white);
+}
+
+.ContactsFaqHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.ContactsCatalogLink {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.ContactsCatalogLink:hover {
+    border-color: var(--accent-color);
+}
+
+.ContactsFaqList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ContactsFaqCard {
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--card-in-background-color);
+}
+
+.ContactsFaqCard h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ContactsFaqCard p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+}
+
+@media (max-width: 1050px) {
+    .ContactsSection {
+        padding: 64px 0;
+    }
+
+    .ContactsCards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ContactsHeroContent {
+        gap: 32px;
+    }
+
+    .ContactsForm {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 760px) {
+    .ContactsHeroContent,
+    .ContactsLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .ContactsFaqHeading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ContactsSection {
+        padding: 48px 0;
+    }
+
+    .ContactsCards,
+    .ContactsFormRow,
+    .ContactsFaqList {
+        grid-template-columns: 1fr;
+    }
+
+    .ContactsCards {
+        margin-bottom: 32px;
+    }
+
+    .ContactsHero h1 {
+        font-size: 40px;
+    }
+
+    .ContactsForm h2,
+    .ContactsFaqHeading h2 {
+        font-size: 28px;
+    }
+}

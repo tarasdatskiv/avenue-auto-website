@@ -1,0 +1,61 @@
+.SearchBar {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(16, 27, 36, 0.06);
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    height: 74px;
+}
+
+.Input{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 8;
+}
+
+.SelectBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 32px;
+    flex: 1;
+}
+
+.Input input,
+.SelectBar select {
+    width: 100%;
+}
+.search-input::placeholder {
+  color: #9ba0a4;
+}
+
+.SelectBar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    background-color: var(--border-color);
+    transform: translateY(-50%);
+}
+
+.Input input,
+.SelectBar select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+}

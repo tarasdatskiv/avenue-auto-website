@@ -1,0 +1,59 @@
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+
+}
+
+.section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.HeroSectionSign {
+    color: var(--blue-graphite);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.HeroSectionSign span {
+    color: var(--secondary-text-color);
+    font-family: var(--accent-font);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.HeroSectionSign div {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.HeroSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 56px auto 32px auto;
+    padding: 0 32px;
+    gap: 12px;
+}
+
+.HeroSectionSign{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeroSectionSign div{
+    max-width: 380px;
+    padding: auto;
+}

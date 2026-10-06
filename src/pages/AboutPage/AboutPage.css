@@ -1,0 +1,402 @@
+.AboutPage {
+    --about-gap: 32px;
+    color: var(--main-text-color);
+    line-height: 1.75;
+}
+
+.AboutPage *,
+.AboutPage *::before,
+.AboutPage *::after {
+    box-sizing: border-box;
+}
+
+.AboutContainer {
+    width: calc(100% - 64px);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.AboutSection {
+    padding: 96px 0;
+}
+
+.AboutPage p {
+    color: var(--secondary-text-color);
+}
+
+.AboutPage .AboutLabel {
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.AboutLabelLine {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.AboutLabelLine::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.AboutPage h1,
+.AboutPage h2 {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.25;
+}
+
+.AboutPage h2 {
+    font-size: 48px;
+}
+
+.AboutPage em {
+    font-family: var(--accent-font);
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+.AboutHero {
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.AboutHeroContent {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.AboutHero h1 {
+    font-size: clamp(40px, 4vw, 72px);
+    line-height: 1.12;
+}
+
+.AboutHero h1 em {
+    color: var(--signed-text-color);
+}
+
+.AboutHero .AboutDescription {
+    margin: var(--about-gap) 0;
+    color: var(--signed-text-color);
+}
+
+.AboutButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.AboutButton:hover {
+    background-color: var(--secondary-accent-color);
+}
+
+.AboutButton:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+}
+
+.AboutPhoto {
+    position: relative;
+    min-width: 0;
+}
+
+.AboutPhoto::before {
+    content: '';
+    position: absolute;
+    top: -32px;
+    left: -32px;
+    width: 96px;
+    height: 96px;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.AboutPhoto > img {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.AboutExperience {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    padding: 16px 20px;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 12px;
+    background-color: var(--blue-graphite);
+}
+
+.AboutExperience strong {
+    display: block;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.AboutExperience span {
+    display: block;
+    color: var(--signed-text-color);
+    font-size: 12px;
+}
+
+.AboutHistory {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 64px;
+}
+
+.AboutHistory h2 em {
+    display: block;
+}
+
+.AboutHistoryText > p + p {
+    margin-top: 20px;
+}
+
+.AboutStats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 40px;
+    gap: 16px;
+}
+
+.AboutStats > div {
+    padding-left: 16px;
+    border-left: 1px solid var(--border-color);
+}
+
+.AboutStats dt {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.AboutStats dd {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}
+
+.AboutPrinciples {
+    background-color: var(--white);
+}
+
+.AboutPrinciplesHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--about-gap);
+    margin-bottom: var(--about-gap);
+}
+
+.AboutPrinciplesHeading > p {
+    max-width: 448px;
+    font-size: 14px;
+}
+
+.AboutPrinciplesList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.AboutPrinciple {
+    padding: var(--about-gap);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--card-in-background-color);
+}
+
+.AboutPrincipleNumber {
+    display: block;
+    margin-bottom: 40px;
+    font-family: var(--accent-font);
+    font-style: italic;
+    font-size: 28px;
+    color: var(--accent-color);
+}
+
+.AboutPrinciple h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.AboutPrinciple p {
+    font-size: 14px;
+}
+
+.AboutStandard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.AboutStandard > img {
+    width: 100%;
+    height: 100%;
+    min-height: 448px;
+    object-fit: cover;
+}
+
+.AboutStandardText {
+    padding: 64px;
+    align-self: center;
+}
+
+.AboutStandard h2 {
+    font-size: 36px;
+}
+
+.AboutStandard ul {
+    list-style: none;
+    margin-top: var(--about-gap);
+    display: grid;
+    gap: 20px;
+}
+
+.AboutStandard li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--signed-text-color);
+    font-size: 14px;
+}
+
+.AboutStandard li::before {
+    content: '✓';
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+@media (max-width: 1050px) {
+    .AboutSection {
+        padding: 64px 0;
+    }
+
+    .AboutHeroContent,
+    .AboutHistory {
+        gap: 32px;
+    }
+
+    .AboutPage h2 {
+        font-size: 36px;
+    }
+
+    .AboutStandardText {
+        padding: 32px;
+    }
+
+    .AboutStandard h2 {
+        font-size: 30px;
+    }
+
+    .AboutPrinciple {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 760px) {
+    .AboutHeroContent,
+    .AboutHistory,
+    .AboutStandard {
+        grid-template-columns: 1fr;
+    }
+
+    .AboutPrinciplesHeading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .AboutPrinciplesList {
+        grid-template-columns: 1fr;
+    }
+
+    .AboutPhoto::before {
+        display: none;
+    }
+
+    .AboutStandard > img {
+        min-height: 0;
+        aspect-ratio: 3 / 2;
+    }
+
+    .AboutPrincipleNumber {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .AboutSection {
+        padding: 48px 0;
+    }
+
+    .AboutPage {
+        --about-gap: 24px;
+    }
+
+    .AboutPage h2 {
+        font-size: 32px;
+    }
+
+    .AboutHero h1 {
+        font-size: 40px;
+    }
+
+    .AboutExperience {
+        bottom: 16px;
+        left: 16px;
+        padding: 12px 16px;
+    }
+
+    .AboutStats {
+        gap: 8px;
+    }
+
+    .AboutStats > div {
+        padding-left: 8px;
+    }
+
+    .AboutStats dt {
+        font-size: 26px;
+    }
+
+    .AboutStandardText {
+        padding: 32px 24px;
+    }
+
+    .AboutStandard h2 {
+        font-size: 28px;
+    }
+}

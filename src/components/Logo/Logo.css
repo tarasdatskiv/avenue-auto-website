@@ -1,0 +1,39 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.logo__title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.logo__title h1 {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+
+    color: var(--white);
+}
+
+.logo__subtitle {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+}
+

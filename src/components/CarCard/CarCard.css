@@ -1,0 +1,168 @@
+.CarList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: calc(100% - 64px);
+    max-width: 1440px;
+    margin: 32px auto;
+}
+
+.CarCard {
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.CarCard:hover {
+    box-shadow: 0 12px 28px rgba(16, 27, 36, 0.16);
+    transform: translateY(-4px);
+}
+
+.CardHeader {
+    position: relative;
+    height: 242px;
+}
+
+.CarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CardBadge,
+.LikeButton {
+    position: absolute;
+    top: 14px;
+}
+
+.CardBadge {
+    left: 14px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--blue-graphite);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.LikeButton,
+.OpenButton {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.LikeButton {
+    right: 14px;
+    width: 38px;
+    height: 38px;
+}
+
+.LikeButton img {
+    width: 18px;
+    height: 18px;
+}
+
+.CardContent {
+    padding: 20px;
+}
+
+.CardTitleRow,
+.Price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CarBrand,
+.CarYear,
+.Price span,
+.CarSpec span {
+    color: var(--signed-text-color);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.CarModel {
+    margin: 6px 0 18px;
+    color: var(--blue-graphite);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.CarSpecs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 18px;
+    padding: 12px 0;
+    border-radius: 12px;
+    background-color: var(--main-background-color);
+}
+
+.CarSpec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.CarSpec + .CarSpec {
+    border-left: 1px solid var(--border-color);
+}
+
+.CarSpec strong {
+    color: var(--blue-graphite);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.Price p {
+    margin-top: 3px;
+    color: var(--blue-graphite);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.OpenButton {
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.OpenButton img {
+    width: 18px;
+    height: 18px;
+    transition: filter 0.2s ease;
+}
+
+.OpenButton:hover {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.OpenButton:hover img {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 900px) {
+    .CarList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .CarList {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,342 @@
+.ServicesPage {
+    color: var(--main-text-color);
+    line-height: 1.75;
+}
+
+.ServicesPage *,
+.ServicesPage *::before,
+.ServicesPage *::after {
+    box-sizing: border-box;
+}
+
+.ServicesContainer {
+    width: calc(100% - 64px);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.ServicesSection {
+    padding: 96px 0;
+}
+
+.ServicesPage p {
+    color: var(--secondary-text-color);
+}
+
+.ServicesPage .ServicesLabel {
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ServicesLabelLine {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ServicesLabelLine::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.ServicesPage h1,
+.ServicesPage h2 {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.25;
+}
+
+.ServicesPage h2 {
+    font-size: 48px;
+}
+
+.ServicesPage em {
+    font-family: var(--accent-font);
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+.ServicesHero {
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.ServicesHeroContent {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: end;
+    gap: 80px;
+}
+
+.ServicesHero h1 {
+    font-size: clamp(40px, 4vw, 72px);
+    line-height: 1.12;
+}
+
+.ServicesHero h1 em,
+.ServicesHeroContent > p {
+    color: var(--signed-text-color);
+}
+
+.ServicesHeroContent > p {
+    max-width: 520px;
+    justify-self: end;
+}
+
+.ServicesHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.ServicesHeading > p {
+    max-width: 448px;
+    font-size: 14px;
+}
+
+.ServicesList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ServiceCard {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+}
+
+.ServiceNumber {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    color: var(--accent-color);
+    font-family: var(--accent-font);
+    font-size: 28px;
+    font-style: italic;
+}
+
+.ServiceNumber::after {
+    content: '';
+    width: 48px;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.ServiceCard h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.35;
+}
+
+.ServiceCard > p {
+    font-size: 14px;
+}
+
+.ServiceCard .ServiceDetail {
+    margin-top: auto;
+    padding-top: 40px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ServicesPersonal {
+    background-color: var(--white);
+}
+
+.ServicesPersonalContent {
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.ServicesPhoto {
+    position: relative;
+    min-width: 0;
+}
+
+.ServicesPhoto > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.ServicesBadge {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 16px;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 12px;
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.ServicesBadge strong {
+    display: block;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.ServicesBadge div > span {
+    display: block;
+    font-size: 12px;
+    color: var(--signed-text-color);
+}
+
+.ServicesCheck {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.ServicesDescription {
+    margin-top: 32px;
+}
+
+.ServicesPersonal ul {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+    list-style: none;
+}
+
+.ServicesPersonal li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.ServicesPersonal li::before {
+    content: '✓';
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--accent-color);
+    background-color: color-mix(in srgb, var(--accent-color) 14%, var(--white));
+}
+
+@media (max-width: 1050px) {
+    .ServicesSection {
+        padding: 64px 0;
+    }
+
+    .ServicesHeroContent,
+    .ServicesPersonalContent {
+        gap: 32px;
+    }
+
+    .ServicesPage h2 {
+        font-size: 36px;
+    }
+
+    .ServiceCard {
+        padding: 24px;
+    }
+
+    .ServiceCard h3 {
+        font-size: 22px;
+    }
+
+    .ServicesBadge {
+        gap: 24px;
+        bottom: 16px;
+        left: 16px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .ServicesList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 760px) {
+    .ServicesHeroContent,
+    .ServicesPersonalContent {
+        grid-template-columns: 1fr;
+    }
+
+    .ServicesHeroContent > p {
+        justify-self: start;
+        max-width: none;
+    }
+
+    .ServicesHeading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .ServicesSection {
+        padding: 48px 0;
+    }
+
+    .ServicesPage h2 {
+        font-size: 32px;
+    }
+
+    .ServicesHero h1 {
+        font-size: 40px;
+    }
+
+    .ServicesList {
+        grid-template-columns: 1fr;
+    }
+
+    .ServicesHeading {
+        margin-bottom: 32px;
+    }
+
+    .ServicesBadge {
+        gap: 16px;
+        max-width: calc(100% - 32px);
+        padding: 12px;
+    }
+
+    .ServicesBadge div > span {
+        font-size: 11px;
+    }
+
+    .ServicesCheck {
+        width: 32px;
+        height: 32px;
+    }
+
+}

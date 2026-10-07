@@ -1,0 +1,258 @@
+﻿html:has(.TermsOfUsePage) {
+    scroll-behavior: smooth;
+}
+
+.TermsOfUsePage {
+    color: var(--main-text-color);
+    line-height: 1.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:has(.TermsOfUsePage) {
+        scroll-behavior: auto;
+    }
+}
+
+.TermsOfUsePage *,
+.TermsOfUsePage *::before,
+.TermsOfUsePage *::after {
+    box-sizing: border-box;
+}
+
+.TermsOfUseSectionHero {
+    padding: 32px 0 80px;
+    background-color: var(--blue-graphite);
+    color: var(--white);
+}
+
+.TermsOfUseHeroContent {
+    width: calc(100% - 64px);
+    max-width: 1344px;
+    margin: 0 auto;
+}
+
+.TermsOfUseLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.TermsOfUseLabel::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.TermsOfUseSectionHero h1 {
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.2;
+}
+
+.TermsOfUseDescription {
+    max-width: 680px;
+    margin-top: 24px;
+    color: var(--signed-text-color);
+    font-size: 16px;
+}
+
+.TermsOfUseUpdated {
+    margin-top: 28px;
+    color: var(--secondary-text-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.TermsOfUseContent {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+    gap: 32px;
+    width: calc(100% - 64px);
+    max-width: 1104px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.TermsOfUseNavigation,
+.TermsOfUseSections {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background-color: var(--white);
+}
+
+.TermsOfUseNavigation {
+    position: sticky;
+    top: 24px;
+    padding: 16px 20px;
+}
+
+.TermsOfUseNavigation > p {
+    margin-bottom: 12px;
+    color: var(--signed-text-color);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.TermsOfUseNavigation ol {
+    list-style: none;
+}
+
+.TermsOfUseNavigation a {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.TermsOfUseNavigation a:hover {
+    background-color: var(--card-in-background-color);
+    color: var(--accent-color);
+}
+
+.TermsOfUseNavigation a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.TermsOfUseNavigationNumber {
+    flex-shrink: 0;
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+.TermsOfUseSections {
+    padding: 0 40px;
+}
+
+.TermsOfUseSection {
+    padding: 40px 0;
+    scroll-margin-top: 24px;
+}
+
+.TermsOfUseSection + .TermsOfUseSection {
+    border-top: 1px solid var(--other-color);
+}
+
+.TermsOfUseSectionHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.TermsOfUseSectionNumber {
+    flex-shrink: 0;
+    font-family: var(--accent-font);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.TermsOfUseSection h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.4;
+}
+
+.TermsOfUseSection p,
+.TermsOfUseSection ul {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+}
+
+.TermsOfUseSection p + p,
+.TermsOfUseSection ul {
+    margin-top: 20px;
+}
+
+.TermsOfUseSection ul {
+    padding-left: 20px;
+}
+
+.TermsOfUseSection li + li {
+    margin-top: 8px;
+}
+
+.TermsOfUseSection li::marker {
+    color: var(--accent-color);
+}
+
+@media (max-width: 1050px) {
+    .TermsOfUseContent {
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 24px;
+        padding: 64px 0;
+    }
+
+    .TermsOfUseSections {
+        padding: 0 28px;
+    }
+
+    .TermsOfUseSection h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 760px) {
+    .TermsOfUseSectionHero {
+        padding: 32px 0 48px;
+    }
+
+    .TermsOfUseContent {
+        grid-template-columns: 1fr;
+        padding: 48px 0;
+    }
+
+    .TermsOfUseNavigation {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .TermsOfUseHeroContent,
+    .TermsOfUseContent {
+        width: calc(100% - 32px);
+    }
+
+    .TermsOfUseSectionHero h1 {
+        font-size: 36px;
+        overflow-wrap: anywhere;
+    }
+
+    .TermsOfUseSections {
+        padding: 0 20px;
+    }
+
+    .TermsOfUseSection {
+        padding: 28px 0;
+    }
+
+    .TermsOfUseSectionHeading {
+        gap: 12px;
+    }
+
+    .TermsOfUseSection h2 {
+        font-size: 24px;
+    }
+}
+

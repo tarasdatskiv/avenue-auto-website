@@ -36,10 +36,10 @@ function Footer() {
                     <nav className="footer__buyers" aria-labelledby="footer-buyers-title">
                         <h3 id="footer-buyers-title">Покупцям</h3>
                         <ul>
-                            <li><a href="">Кредитування</a></li>
-                            <li><a href="">Trade-in</a></li>
-                            <li><a href="">Гарантія</a></li>
-                            <li><a href="">Запис на огляд</a></li>
+                            <li><Link to="/Services">Кредитування</Link></li>
+                            <li><Link to="/Services">Trade-in</Link></li>
+                            <li><Link to="/Services">Гарантія</Link></li>
+                            <li><Link to="/Services">Запис на огляд</Link></li>
                         </ul>
                     </nav>
                     <div className="footer__contacts">
@@ -60,8 +60,8 @@ function Footer() {
                 <div className="footer__bottom">
                     <p>© 2025 Авеню Авто. Усі права захищені.</p>
                     <div className="footer__legal">
-                        <a href="">Політика конфіденційності</a>
-                        <a href="">Умови користування</a>
+                        <Link to="/PrivacyPolicy">Політика конфіденційності</Link>
+                        <Link to="/Terms">Умови користування</Link>
                     </div>
                 </div>
             </div>
